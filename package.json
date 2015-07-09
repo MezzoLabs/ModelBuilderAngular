@@ -13,6 +13,9 @@
     "url": "https://github.com/MezzoLabs/ModelBuilder/issues"
   },
   "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
+  "dependencies": {
+    "koala": "marc1404/koala"
+  },
   "devDependencies": {
     "gulp-blueprint": "marc1404/gulp-blueprint"
   }
