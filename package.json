@@ -1,0 +1,15 @@
+{
+  "name": "mezzo-model-builder",
+  "version": "0.0.1",
+  "description": "Drag and drop model builder powered by ES6 and AngularJS.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MezzoLabs/ModelBuilder.git"
+  },
+  "author": "Simon Schneider, Marc Vornetran",
+  "bugs": {
+    "url": "https://github.com/MezzoLabs/ModelBuilder/issues"
+  },
+  "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme"
+}
