@@ -1,3 +1,3 @@
 'use strict';
 
-var app = angular.module('Mezzo-ModelBuilder', [ 'ngRoute' ]);
+var app = angular.module('mezzo-model-builder', [ 'ngRoute' ]);
