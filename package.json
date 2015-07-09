@@ -17,6 +17,7 @@
     "koala": "marc1404/koala"
   },
   "devDependencies": {
+    "gulp": "*",
     "gulp-blueprint": "marc1404/gulp-blueprint"
   }
 }
