@@ -11,5 +11,8 @@
   "bugs": {
     "url": "https://github.com/MezzoLabs/ModelBuilder/issues"
   },
-  "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme"
+  "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
+  "devDependencies": {
+    "gulp-blueprint": "marc1404/gulp-blueprint"
+  }
 }
