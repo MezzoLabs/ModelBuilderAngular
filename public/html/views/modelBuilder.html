@@ -50,6 +50,8 @@
         <div class="page-header">
             <h3>models</h3>
         </div>
-        <p ng-repeat="field in fields track by $index" ng-bind="field"></p>
+        <div class="sortable-container" sv-root sv-part="fields">
+            <div class="well" ng-repeat="field in fields track by $index" sv-element="{ containment: '.sortable-container' }" ng-bind="field"></div>
+        </div>
     </div>
 </div>
