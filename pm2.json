@@ -1,0 +1,11 @@
+{
+    "apps": [
+        {
+            "name": "mezzo-model-builder",
+            "script": "app.js",
+            "log_date_format": "YYYY-MM-DD HH:mm:ss.SSS",
+            "watch": true,
+            "node_args": "--harmony --harmony_arrow_functions"
+        }
+    ]
+}
