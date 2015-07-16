@@ -1,6 +1,7 @@
 var directives = [
     require('./compile'),
-    require('./textSingle')
+    require('./textSingle'),
+    require('./textMulti')
 ];
 
 module.exports = app => {
