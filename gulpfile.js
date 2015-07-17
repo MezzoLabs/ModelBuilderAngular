@@ -1,3 +1,6 @@
 var blueprint = require('gulp-blueprint');
 
-blueprint();
+blueprint({
+    outputPath: 'public/dist',
+    outputFile: 'app.min.js'
+});
