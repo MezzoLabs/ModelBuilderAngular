@@ -1,8 +1,6 @@
 var routes = require('./routes');
 
-module.exports = /*@ngInject*/ ($routeProvider, $locationProvider) => {
-    $locationProvider.html5Mode(true);
-
+module.exports = /*@ngInject*/ function config($routeProvider){
     routes.forEach(route => {
        $routeProvider.when(route.when, route);
     });

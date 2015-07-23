@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('mezzo-model-builder', [ 'ngRoute', 'angular-sortable-view' ]);
+var app = angular.module('mezzo-model-builder', [ 'ngRoute' ]);
 
 app.config(require('./config'));
 require('./directives')(app);
