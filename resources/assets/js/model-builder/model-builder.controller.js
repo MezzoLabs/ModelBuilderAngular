@@ -1,4 +1,5 @@
-module.exports = /*@ngInject*/ $scope => {
+exports.name = 'ModelBuilderController';
+exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
     $scope.tab = 'add';
     $scope.fields = [];
 

@@ -1,5 +1,5 @@
-exports.name = 'Compile';
-exports.factory = /*@ngInject*/ $compile => {
+exports.name = 'mezzoCompile';
+exports.directive = /*@ngInject*/ $compile => {
     return {
         restrict: 'A',
         link: (scope, element, attrs) => {

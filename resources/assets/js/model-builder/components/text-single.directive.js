@@ -1,5 +1,5 @@
-exports.name = 'TextSingle';
-exports.factory = () => {
+exports.name = 'mezzoTextSingle';
+exports.directive = () => {
     return {
         restrict: 'E',
         templateUrl: 'directives/textSingle.html',
