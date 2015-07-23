@@ -12,7 +12,7 @@ elixir(function(mix) {
 });
 
 gulp.task('html', function(){
-    return gulp.src('resources/assets/html/**/*')
+    return gulp.src('resources/assets/index.html')
         .pipe(gulp.dest('public'));
 });
 
