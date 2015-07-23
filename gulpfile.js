@@ -11,7 +11,8 @@ elixir(function(mix) {
 });
 
 gulp.task('html', function(){
-    return gulp.src('resources/assets/html/**/*').pipe(gulp.dest('public'));
+    return gulp.src('resources/assets/html/**/*')
+        .pipe(gulp.dest('public'));
 });
 
 gulp.task('register', function(){
