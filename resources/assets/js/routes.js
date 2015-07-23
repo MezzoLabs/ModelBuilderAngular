@@ -1,7 +1,7 @@
 module.exports = [
     {
         when: '/',
-        templateUrl: 'views/modelBuilder.html',
+        templateUrl: 'model-builder/model-builder.view.html',
         controller: 'ModelBuilderController'
     }
 ];
