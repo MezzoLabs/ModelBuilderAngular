@@ -13,11 +13,7 @@
     "url": "https://github.com/MezzoLabs/ModelBuilder/issues"
   },
   "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
-  "dependencies": {
-    "koala": "marc1404/koala"
-  },
   "devDependencies": {
-    "gulp": "*",
-    "gulp-blueprint": "marc1404/gulp-blueprint"
+    "laravel-elixir": "^2.3.13"
   }
 }
