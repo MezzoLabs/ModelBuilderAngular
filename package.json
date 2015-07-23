@@ -15,6 +15,7 @@
   "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
     "laravel-elixir": "^2.3.13"
   }
 }
