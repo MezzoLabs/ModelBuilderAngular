@@ -18,7 +18,7 @@ gulp.task('html', function(){
 
 gulp.task('template-cache', function(){
     return gulp.src('resources/assets/js/**/*.html')
-        .pipe(templateCache())
+        .pipe(templateCache('templates.js', { standalone: true }))
         .pipe(gulp.dest('resources/assets/js'));
 });
 
