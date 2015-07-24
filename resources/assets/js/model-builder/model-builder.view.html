@@ -7,20 +7,20 @@
         </div>
         <ul class="nav nav-tabs">
             <li style="width: 50%" ng-class="{ active: tab === 'add' }">
-                <a href="#tab-add-field" ng-click="showTab($event, 'add')">
+                <a href="#tab-add" ng-click="showTab('add', $event)">
                     <span class="glyphicon glyphicon-arrow-down pull-right" ng-show="tab === 'add'"></span>
                     <span>Add Field</span>
                 </a>
             </li>
-            <li style="width: 50%" ng-class="{ active: tab === 'edit' }">
-                <a href="#tab-edit-field" ng-click="showTab($event, 'edit')">
+            <li style="width: 50%" ng-class="{ active: tab === 'edit', disabled: !selectedField }">
+                <a id="tab-heading-edit" href="#tab-edit" ng-click="showTab('edit', $event)">
                     <span class="glyphicon glyphicon-arrow-right pull-right" ng-show="tab === 'edit'"></span>
                     <span>Edit Field</span>
                 </a>
             </li>
         </ul>
         <div class="tab-content">
-            <div id="tab-add-field" class="tab-pane" ng-class="{ active: tab === 'add' }">
+            <div id="tab-add" class="tab-pane" ng-class="{ active: tab === 'add' }">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h5 class="panel-title">Text</h5>
@@ -43,15 +43,13 @@
                     </div>
                 </div>
             </div>
-            <div id="tab-edit-field" class="tab-pane" ng-class="{ active: tab === 'edit' }">Edit Field</div>
+            <div id="tab-edit" class="tab-pane" ng-class="{ active: tab === 'edit' }">Edit Field</div>
         </div>
     </div>
     <div class="col-sm-8">
         <div class="page-header">
             <h3>models</h3>
         </div>
-        <div class="sortable-container" sv-root sv-part="fields">
-            <div class="well" ng-repeat="field in fields track by $index" sv-element mezzo-compile="field"></div>
-        </div>
+        <div ng-repeat="field in fields track by $index" mezzo-compile="field" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }"></div>
     </div>
 </div>
