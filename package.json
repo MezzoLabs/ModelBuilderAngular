@@ -14,9 +14,7 @@
   },
   "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-angular-templatecache": "^1.7.0",
-    "gulp-ng-register": "github:marc1404/gulp-ng-register",
-    "laravel-elixir": "^2.3.13"
+    "laravel-elixir": "^2.3.13",
+    "gulp-blueprint": "marc1404/gulp-blueprint"
   }
 }

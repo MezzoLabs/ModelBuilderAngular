@@ -1,5 +1,3 @@
-require('./templates');
-
 var app = angular.module('mezzo-model-builder', [ 'ngRoute', 'templates' ]);
 
 app.config(require('./config'));
