@@ -43,13 +43,16 @@
                     </div>
                 </div>
             </div>
-            <div id="tab-edit" class="tab-pane" ng-class="{ active: tab === 'edit' }">Edit Field</div>
+            <div id="tab-edit" class="tab-pane" ng-class="{ active: tab === 'edit' }">
+                <h4>Options</h4>
+                <div mezzo-compile="selectedField.optionsDirective"></div>
+            </div>
         </div>
     </div>
     <div class="col-sm-8">
         <div class="page-header">
             <h3>models</h3>
         </div>
-        <div ng-repeat="field in fields track by $index" mezzo-compile="field" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }"></div>
+        <div ng-repeat="field in fields track by $index" mezzo-compile="field.mainDirective" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }"></div>
     </div>
 </div>

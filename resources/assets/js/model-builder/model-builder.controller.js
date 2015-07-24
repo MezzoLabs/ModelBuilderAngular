@@ -25,8 +25,12 @@ exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
         }
     }
 
-    function addField(field){
-        $scope.fields.push(field);
+    function addField(name){
+        $scope.fields.push({
+            name: name,
+            mainDirective: 'mezzo-' + name,
+            optionsDirective: 'mezzo-' + name + '-options'
+        });
     }
 
     function selectField(field){
