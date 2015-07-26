@@ -9,7 +9,6 @@ exports.directive = /*@ngInject*/ function inject(componentService){
     function link(scope){
         componentService.onOptionsChange(options => {
             scope.options = options;
-            console.log(options);
         });
     }
 };

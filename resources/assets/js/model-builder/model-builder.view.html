@@ -47,7 +47,7 @@
                 <h4>Options</h4>
                 <div mezzo-compile="selectedField.optionsDirective"></div>
                 <hr/>
-                <button type="button" class="btn btn-danger" ng-click="deleteField(field)">
+                <button type="button" class="btn btn-danger" ng-click="deleteField(selectedField)">
                     <span class="glyphicon glyphicon-trash"></span>
                     Delete field
                 </button>
@@ -58,6 +58,8 @@
         <div class="page-header">
             <h3>models</h3>
         </div>
-        <div ng-repeat="field in fields track by $index" mezzo-compile="field.mainDirective" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }"></div>
+        <div ng-repeat="field in fields" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }">
+            <div mezzo-compile="field.mainDirective"></div>
+        </div>
     </div>
 </div>
