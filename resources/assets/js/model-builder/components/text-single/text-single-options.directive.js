@@ -1,14 +1,3 @@
-exports.name = 'mezzoTextSingleOptions';
-exports.directive = /*@ngInject*/ function inject(componentService){
-    return {
-        restrict: 'E',
-        templateUrl: 'model-builder/components/text-single/text-single-options.html',
-        link
-    };
+import ComponentOptions from '../ComponentOptions';
 
-    function link(scope){
-        componentService.onOptionsChange(options => {
-            scope.options = options;
-        });
-    }
-};
+module.exports = new ComponentOptions('mezzoTextSingleOptions', 'text-single/text-single-options.html');
