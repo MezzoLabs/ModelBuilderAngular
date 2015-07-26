@@ -1,5 +1,5 @@
 exports.name = 'ModelBuilderController';
-exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
+exports.controller = /*@ngInject*/ function ModelBuilderController($scope, componentService){
 
     $scope.tab = 'add';
     $scope.fields = [];
@@ -27,27 +27,34 @@ exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
     }
 
     function addField(name){
-        $scope.fields.push({
+        var field = {
             name: name,
+            options: {},
             mainDirective: 'mezzo-' + name,
             optionsDirective: 'mezzo-' + name + '-options'
-        });
+        };
+
+        componentService.setOptions(field.options);
+        $scope.fields.push(field);
     }
 
     function selectField(field){
         $scope.selectedField = field;
 
-        if(field){
-            showTab('edit');
-        }else{
-            showTab('add');
-        }
+        componentService.setOptions(field.options);
+        showTab('edit');
+    }
+
+    function unselect(){
+        $scope.selectedField = null;
+
+        showTab('add');
     }
 
     function deleteField(field){
         var index = $scope.fields.indexOf(field);
 
-        selectField(null);
+        unselect();
         $scope.fields.splice(index, 1);
     }
 

@@ -7,7 +7,9 @@ exports.directive = /*@ngInject*/ function inject(componentService){
     };
 
     function link(scope){
-        scope.options = { label: 'test0', placeholder: 'test1' };
-        componentService.options = scope.options;
+        var options = componentService.options;
+        scope.options = options;
+        options.label = 'Label';
+        options.placeholder = 'Placeholder';
     }
 };

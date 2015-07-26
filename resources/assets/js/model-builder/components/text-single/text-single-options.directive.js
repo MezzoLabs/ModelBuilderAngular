@@ -7,8 +7,9 @@ exports.directive = /*@ngInject*/ function inject(componentService){
     };
 
     function link(scope){
-        scope.$watch(componentService.options, () => {
-            scope.options = componentService.options;
+        componentService.onOptionsChange(options => {
+            scope.options = options;
+            console.log(options);
         });
     }
 };
