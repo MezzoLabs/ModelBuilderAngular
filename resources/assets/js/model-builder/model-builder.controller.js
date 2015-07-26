@@ -8,6 +8,7 @@ exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
     $scope.showTab = showTab;
     $scope.addField = addField;
     $scope.selectField = selectField;
+    $scope.deleteField = deleteField;
 
     function showTab(tab, $event){
         if($event){
@@ -36,7 +37,18 @@ exports.controller = /*@ngInject*/ function ModelBuilderController($scope){
     function selectField(field){
         $scope.selectedField = field;
 
-        showTab('edit');
+        if(field){
+            showTab('edit');
+        }else{
+            showTab('add');
+        }
+    }
+
+    function deleteField(field){
+        var index = $scope.fields.indexOf(field);
+
+        selectField(null);
+        $scope.fields.splice(index, 1);
     }
 
 };

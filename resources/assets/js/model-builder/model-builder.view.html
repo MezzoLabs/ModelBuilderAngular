@@ -46,6 +46,11 @@
             <div id="tab-edit" class="tab-pane" ng-class="{ active: tab === 'edit' }">
                 <h4>Options</h4>
                 <div mezzo-compile="selectedField.optionsDirective"></div>
+                <hr/>
+                <button type="button" class="btn btn-danger" ng-click="deleteField(field)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Delete field
+                </button>
             </div>
         </div>
     </div>
