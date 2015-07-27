@@ -58,8 +58,10 @@
         <div class="page-header">
             <h3>models</h3>
         </div>
-        <div ng-repeat="field in fields" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }">
-            <div mezzo-compile="field.mainDirective"></div>
+        <div sv-root sv-part="fields">
+            <div ng-repeat="field in fields" ng-click="selectField(field)" ng-class="{ 'well well-sm': field === selectedField }" sv-element>
+                <div mezzo-compile="field.mainDirective"></div>
+            </div>
         </div>
     </div>
 </div>
