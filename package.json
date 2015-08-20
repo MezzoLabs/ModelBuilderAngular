@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/MezzoLabs/ModelBuilder#readme",
   "devDependencies": {
-    "gulp-blueprint": "github:marc1404/gulp-blueprint",
+    "gulp-blueprint": "0.0.3",
     "laravel-elixir": "^2.3.13"
   }
 }
