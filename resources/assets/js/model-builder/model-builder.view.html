@@ -21,11 +21,13 @@
         </ul>
         <div class="tab-content">
             <div id="tab-add" class="tab-pane" ng-class="{ active: tab === 'add' }">
+                <!-- ADD COMPONENTS -->
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h5 class="panel-title">Text</h5>
                     </div>
                     <div class="panel-body">
+
                         <div class="row">
                             <div class="col-sm-6">
                                 <button type="button" class="btn btn-default btn-block" ng-click="addField('text-single')">
@@ -40,9 +42,30 @@
                                 </button>
                             </div>
                         </div>
+
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Basic</h5>
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <button type="button" class="btn btn-default btn-block" ng-click="addField('checkbox')">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                    <span>Checkbox</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- ADD COMPONENTS -->
             </div>
+
             <div id="tab-edit" class="tab-pane" ng-class="{ active: tab === 'edit' }">
                 <h4>Options</h4>
                 <div mezzo-compile="selectedField.optionsDirective"></div>
@@ -52,6 +75,7 @@
                     Delete field
                 </button>
             </div>
+
         </div>
     </div>
     <div class="col-sm-8">
