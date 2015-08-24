@@ -1,13 +1,13 @@
 export default class ComponentOptions {
 
-    constructor(name, templateUrl){
+    constructor(name, templateUrl, controller){
         this.name = name;
-        this.directive = directive(templateUrl);
+        this.directive = directive(templateUrl, controller);
     }
 
 }
 
-function directive(templateUrl){
+function directive(templateUrl, controller){
     return /*@ngInject*/ function inject(componentService){
         return {
             restrict: 'E',
@@ -19,6 +19,10 @@ function directive(templateUrl){
             componentService.onOptionsChange(options => {
                 scope.options = options;
             });
+
+            if(controller){
+                controller(scope);
+            }
         }
     };
 }
